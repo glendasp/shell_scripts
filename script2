@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Note how the ACTION variable assignment contains the strange looking :- operator. This variable
+# assignment basically says "assign the value of the first argument to the variable ACTION, but if
+# the argument doesn’t exist then use launch as the default value of the variable"
+
+# The if-then-else code structure performs an initial test [ -z "$1" ] which checks to see if the
+# first argument is an empty string. This test evaluates as true if the first argument doesn’t exist.
+# Note, the spaces in this code are very important. The bash interpreter will not understand the
+# code statement properly if the spaces are left out.
+
+# assign the action
+ACTION=${1:-launch}
+
+# display first provided argument
+if [ -z "$1" ]
+	then
+		echo "No argument supplied, default action is: $ACTION"
+	else
+		echo "Initiating $ACTION."
+fi

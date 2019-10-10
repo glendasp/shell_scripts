@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# assign first command line argument
+ARG1=${1}
+
+# display first provided argument
+echo $ARG1
+
+
+# assign second command line argument
+ARG2=${2}
+
+# display second provided argument
+echo $ARG2
+
